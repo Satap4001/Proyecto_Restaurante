@@ -6,7 +6,7 @@
         } else { 
             session_start();
             
-            $host = 'localhost:3300';
+            $host = 'localhost';
             $dbname = 'cadena_restaurantes';
             $dbuser = 'root';
             $dbpass = '';
@@ -28,12 +28,14 @@
             $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($pass == $resultado['Clave'] && $usuario == $resultado['Correo']){
-                header("Location: ");
+                header("Location: categorias.php");
             } else {
-                echo "Error, no has accedido, usuario o contraseña incorrecta";
+                echo "<br>Error, no has accedido, usuario o contraseña incorrecta";
             }
         }
 
+    } else {
+        header("Location: login.php");
     }
     
 ?>
