@@ -14,7 +14,11 @@
     }
 </style>
 <header>
+    <?php session_start(); ?>
     <div>
+        <div>
+            <?php echo $_SESSION['usuario']; ?>
+        </div>
         <div>
             <a href="categorias.php">Categorias</a>
         </div>

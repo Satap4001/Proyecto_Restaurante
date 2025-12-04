@@ -7,10 +7,9 @@
 </head>
 <body>
     <?php 
-    require 'cabecera.php'
+        require 'cabecera.php';
+        echo "<h1>Lista de categorías</h1>"; 
     ?>
-    <?php 
-        echo "<h1>Lista de categorías</h1>";       
-    ?>
+    
 </body>
 </html>
