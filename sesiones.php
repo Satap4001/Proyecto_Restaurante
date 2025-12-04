@@ -28,6 +28,9 @@
             $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($pass == $resultado['Clave'] && $usuario == $resultado['Correo']){
+                if (isset($_POST['recordar'])){
+                    setcookie("recordar", $usuario , time() + 3600 );
+                }
                 header("Location: categorias.php");
             } else {
                 echo "<br>Error, no has accedido, usuario o contraseña incorrecta";
