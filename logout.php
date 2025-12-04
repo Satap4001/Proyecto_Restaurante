@@ -1,5 +1,6 @@
-<?php 
+<?php
+    setcookie("recordar" , $usuario , time() - 3600);
     session_unset();
     session_destroy();
-    header("Location: login.php");
+    header("Location: login.php");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ?>
