@@ -22,8 +22,16 @@
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $resultado;
-    }   
+    }
+    
+    function getCategory (){
+        $pdo = connectDatabase();
 
+        $stmt = $pdo->prepare("SELECT * FROM categorias");
+        $stmt->execute();
 
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        return $resultado;
+    }      
 ?>

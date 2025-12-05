@@ -13,6 +13,7 @@
             color: #587ba1ff;
             margin-bottom: 20px;
             font-weight: 700;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         }
 
         .login {
@@ -30,7 +31,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url(Images/fondoLogin.webp);
+            background-image: url(Images/fondo.webp);
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -52,6 +53,7 @@
         form label {
             font-weight: 600;
             color: #000000ff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         }
 
         form input[type="text"],
