@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn</title>
+    <title>Login</title>
     <style>
         /* Estilo del título */
         .login h1 {
@@ -107,7 +107,7 @@
                 <input type="text" name="usuario" id="usuario">
             </p>
             <p><label for="pass">Contraseña</label>
-                <input type="text" name="pass" id="pass">
+                <input type="password" name="pass" id="pass">
             </p>
             <p class="checkbox-container">
                 <input type="checkbox" name="recordar" id="recordar">
