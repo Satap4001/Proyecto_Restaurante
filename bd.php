@@ -22,18 +22,16 @@
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $resultado;
-    }   
-
-    function searchProductsInCategory ($categoria){
-        $pdo = connectDatabase();
-        $categoria = searchCategory($categoria);
-        
-        $stmt = $pdo->prepare("SELECT * FROM productos where CodCat like :%Codcategoria%");
-
-        $stmt->execute(["Codcategoria" => $categoria[0]['CodCat']]);
-
-        
     }
+    
+    function getCategory (){
+        $pdo = connectDatabase();
 
+        $stmt = $pdo->prepare("SELECT * FROM categorias");
+        $stmt->execute();
 
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }      
 ?>

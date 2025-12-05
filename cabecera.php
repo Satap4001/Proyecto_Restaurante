@@ -4,6 +4,7 @@ header {
     width: 100%;
     padding: 10px 20px;
     box-sizing: border-box;
+    background-color: #f0f0f0;
 }
 
 /* Flex para distribuir las tres zonas */
