@@ -103,7 +103,8 @@
     <div class="login">
         <h1>Inicar sesión</h1>
         <form action="sesiones.php" method="POST">
-            <p><label for="usuario">Usuario</label>
+            <p>
+                <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="usuario">
             </p>
             <p><label for="pass">Contraseña</label>

@@ -12,5 +12,6 @@
     <?php
         echo "<h1>Lista de categorías</h1>"; 
     ?>
+    
 </body>
 </html>
