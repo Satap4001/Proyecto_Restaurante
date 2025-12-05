@@ -99,10 +99,12 @@
     <div class="login">
         <h1>Inicar sesión</h1>
         <form action="sesiones.php" method="POST">
-            <p><label for="usuario">Usuario</label>
+            <p>
+                <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="usuario">
             </p>
-            <p><label for="pass">Contraseña</label>
+            <p>
+                <label for="pass">Contraseña</label>
                 <input type="text" name="pass" id="pass">
             </p>
             <p class="checkbox-container">
