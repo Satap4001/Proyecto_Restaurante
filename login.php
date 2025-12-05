@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn</title>
+    <title>Login</title>
     <style>
         /* Estilo del título */
         .login h1 {
             text-align: center;
             font-size: 48px;
-            color: #4A90E2;
+            color: #587ba1ff;
             margin-bottom: 20px;
             font-weight: 700;
         }
@@ -24,17 +24,21 @@
         /* Estilo general del cuerpo */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f2f5;
+            background: #FAFAFA;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-image: url(Images/fondoLogin.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         /* Estilo del formulario */
         form {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.35); 
+            backdrop-filter: blur(2px); 
             padding: 30px 40px;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -47,7 +51,7 @@
 
         form label {
             font-weight: 600;
-            color: #333333;
+            color: #000000ff;
         }
 
         form input[type="text"],
@@ -103,9 +107,8 @@
                 <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="usuario">
             </p>
-            <p>
-                <label for="pass">Contraseña</label>
-                <input type="text" name="pass" id="pass">
+            <p><label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass">
             </p>
             <p class="checkbox-container">
                 <input type="checkbox" name="recordar" id="recordar">
