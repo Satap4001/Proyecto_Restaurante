@@ -1,5 +1,5 @@
 <?php 
-    
+    require_once('bd.php');
     if (isset($_POST['usuario']) && isset($_POST['pass'])){
         if ( empty($_POST['usuario']) || empty($_POST['pass']) ){
             die("Debes rellenar todos los campos");
