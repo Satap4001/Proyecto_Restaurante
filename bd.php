@@ -16,7 +16,7 @@
     function searchCategory ($categoria){
         $pdo = connectDatabase();
 
-        $stmt = $pdo->prepare("SELECT * FROM categorias WHERE Nombre like :categoria");
+        $stmt = $pdo->prepare("SELECT * FROM categorias WHERE Nombre like :%categoria%");
         $stmt->execute([":categoria" => $categoria]);
 
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -24,6 +24,16 @@
         return $resultado;
     }   
 
+    function searchProductsInCategory ($categoria){
+        $pdo = connectDatabase();
+        $categoria = searchCategory($categoria);
+        
+        $stmt = $pdo->prepare("SELECT * FROM productos where CodCat like :%Codcategoria%");
+
+        $stmt->execute(["Codcategoria" => $categoria[0]['CodCat']]);
+
+        
+    }
 
 
 ?>
