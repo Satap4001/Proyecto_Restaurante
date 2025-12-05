@@ -5,14 +5,8 @@
             die("Debes rellenar todos los campos");
         } else { 
             session_start();
-            
-            $host = 'localhost';
-            $dbname = 'cadena_restaurantes';
-            $dbuser = 'root';
-            $dbpass = '';
-            $charset = 'utf8mb4';
-            $pdo = new PDO ("mysql:host=$host;dbname=$dbname;charset=$charset" , $dbuser , $dbpass);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //Conexion a base de datos
+            $pdo = connectDatabase();
 
             $pass = $_POST['pass'];
             $usuario = $_POST['usuario'];

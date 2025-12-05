@@ -15,9 +15,9 @@
 </style>
 <header>
     <?php session_start(); ?>
-    <div>
+    <div>        
         <div>
-            <?php echo $_SESSION['usuario']; ?>
+            <?php /*Linea para obtener el usuario*/ echo $_SESSION['usuario']; ?>
         </div>
         <div>
             <a href="categorias.php">Categorias</a>
