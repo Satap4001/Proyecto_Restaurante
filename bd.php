@@ -16,7 +16,7 @@
     function searchCategory ($categoria){
         $pdo = connectDatabase();
 
-        $stmt = $pdo->prepare("SELECT * FROM categorias WHERE Nombre like :categoria");
+        $stmt = $pdo->prepare("SELECT * FROM categorias WHERE Nombre like :%categoria%");
         $stmt->execute([":categoria" => $categoria]);
 
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
