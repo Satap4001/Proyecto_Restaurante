@@ -83,4 +83,5 @@
         echo "<td><form action = carrito.php><input type='hidden' value='".$producto['CodProd'] ."' name='codProduct'><input type='hidden' value='".$producto['Nombre'] ."' name='nombreProduct'><input type = 'number' name = 'numComprar'><button type = 'submit'>Comprar</button></form></td></tr>";
     };
     echo"</table></div>";
+    
 ?>
