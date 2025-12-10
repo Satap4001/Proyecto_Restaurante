@@ -13,17 +13,28 @@
         return $pdo;
     }
 
-    function searchCategoryByName ($categoria){
+    function searchCategoryByID ($codCat){
         $pdo = connectDatabase();
 
-        $stmt = $pdo->prepare("SELECT CodCat FROM categorias WHERE Nombre like :categoria");
-        $stmt->execute([":categoria" => $categoria]);
+        $stmt = $pdo->prepare("SELECT * FROM categorias WHERE CodCat like :categoria");
+        $stmt->execute([":categoria" => $codCat]);
 
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $resultado;
     }
     
+    function getProductFromCategory($codCat) {
+        $pdo = connectDatabase();
+
+        $stmt = $pdo->prepare("SELECT * FROM productos WHERE CodCat like :categoria");
+        $stmt->execute([":categoria" => $codCat]);
+
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
+
     function getCategory (){
         $pdo = connectDatabase();
 
