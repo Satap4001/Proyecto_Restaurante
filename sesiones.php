@@ -1,3 +1,14 @@
+<head>
+    <style>
+    /* Estilo general del contenedor */
+    body {
+        background-image: url(Images/fondo.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: red;
+    }
+    </style>
+</head>
 <?php 
     require_once('bd.php');
     if (isset($_POST['usuario']) && isset($_POST['pass'])){
@@ -27,7 +38,7 @@
                 }
                 header("Location: categorias.php");
             } else {
-                echo "<br>Error, no has accedido, usuario o contraseña incorrecta";
+                echo "<br class = 'error'>Error, no has accedido, usuario o contraseña incorrecta";
             }
         }
 
