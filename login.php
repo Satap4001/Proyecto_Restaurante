@@ -53,7 +53,7 @@
         form label {
             font-weight: 600;
             color: #000000ff;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         }
 
         form input[type="text"],
