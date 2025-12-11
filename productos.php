@@ -3,12 +3,6 @@
     header {
         width: 100%;
         box-sizing: border-box;
-        overflow-x: hidden; /* evita que nada sobresalga */
-    }
-
-    header img {
-        max-width: 25px;
-        height: auto;
     }
     
     body {
@@ -55,13 +49,11 @@
     }
 
     .header-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;   /* ESTO CENTRA el header */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* tres columnas iguales */
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
     }
 
     .princ {
