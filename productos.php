@@ -65,7 +65,7 @@
 <?php 
     require_once('bd.php');
     require 'cabecera.php';
-        
+
     echo "<div class='container'><h1>Lista de Productos</h1>";
     $categoria = $_POST["CodCat"];
     $nombreCat = searchCategoryByID($categoria);
@@ -80,7 +80,7 @@
             <td>".$producto["Descripcion"]."</td>
             <td>".$producto["Peso"]."</td>
             <td>".$producto["Stock"]."</td>";
-        echo "<td><form action = carrito.php><input type='hidden' value='".$producto['CodProd'] ."' name='codProduct'><input type='hidden' value='".$producto['Nombre'] ."' name='nombreProduct'><input type = 'number' name = 'numComprar'><button type = 'submit'>Comprar</button></form></td></tr>";
+        echo "<td><form action = anadir.php method='post'><input type='hidden' value='".$producto['CodProd'] ."' name='codProduct'><input type='hidden' value='".$producto['Nombre'] ."' name='nombreProduct'><input type = 'number' name = 'numComprar'><button type = 'submit'>Comprar</button></form></td></tr>";
     };
     echo"</table></div>";
 ?>
