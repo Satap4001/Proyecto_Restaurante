@@ -56,4 +56,21 @@
 
         return $resultado;
     }
+
+    function getWeight($id){
+        $pdo = connectDatabase();
+
+        $stmt = $pdo->prepare("SELECT Peso FROM Productos where CodProd like :codProd");
+        $stmt->execute([":codProd" => $id]);
+
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
+
+    function addPedio ($id){
+        $pdo = connectDatabase();
+
+        $stmt = $pdo->prepare("INSERT INTO pedidos (CodProd, Fecha, )");
+    }
 ?>
