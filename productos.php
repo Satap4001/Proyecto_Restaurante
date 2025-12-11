@@ -1,5 +1,16 @@
 <head>
     <style>
+    header {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden; /* evita que nada sobresalga */
+    }
+
+    header img {
+        max-width: 25px;
+        height: auto;
+    }
+    
     body {
         background-image: url(Images/fondo.webp);
         background-size: cover;
@@ -8,31 +19,49 @@
 
     .container {
         width: 100%;
+        max-width: 1200px;  
+        margin: 0 auto;      
         min-height: 100vh;
         padding: 20px;
         background-color: rgba(240,240,240,0.05);
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 
     h1 {
         text-align: center;
         color: #587ba1;
         margin-bottom: 20px;
+        text-shadow: 1px 1px 5px rgba(10, 1, 74, 0.5);
     }
 
     h2 {
         text-align: center;
         color: #587ba1;
         margin-bottom: 20px;
+        text-shadow: 1px 1px 5px rgba(10, 1, 74, 0.5);
     }
 
     table {
-        width: 80%;
+        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
         border-collapse: collapse;
         background: white;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);       
+    }
+
+    .header-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;   /* ESTO CENTRA el header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
     }
 
     .princ {
@@ -69,7 +98,7 @@
     echo "<div class='container'><h1>Lista de Productos</h1>";
     $categoria = $_POST["CodCat"];
     $nombreCat = searchCategoryByID($categoria);
-    echo "<h2>".$nombreCat[0]["Nombre"]."<h2>";
+    echo "<h2>".$nombreCat[0]["Nombre"]."</h2>";
 
     $productos = getProductFromCategory($categoria);
 
@@ -80,7 +109,7 @@
             <td>".$producto["Descripcion"]."</td>
             <td>".$producto["Peso"]."</td>
             <td>".$producto["Stock"]."</td>";
-        echo "<td><form action = anadir.php method='post'><input type='hidden' value='".$producto['CodProd'] ."' name='codProduct'><input type='hidden' value='".$producto['Nombre'] ."' name='nombreProduct'><input type = 'number' name = 'numComprar'><button type = 'submit'>Comprar</button></form></td></tr>";
+        echo "<td><form action = anadir.php method='post'><input type='hidden' value='".$producto['CodProd'] ."' name='codProduct'><input type='hidden' value='".$producto['Nombre'] ."' name='nombreProduct'><input type = 'number' value = 0 min = 1 name = 'numComprar'><button type = 'submit'>Comprar</button></form></td></tr>";
     };
     echo"</table></div>";
 ?>

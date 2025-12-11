@@ -5,16 +5,20 @@ header {
     padding: 10px 20px;
     box-sizing: border-box;
     background-color: #f0f0f0;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Flex para distribuir las tres zonas */
 header .header-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* tres columnas iguales */
     align-items: center;
 }
 
 /* Zona izquierda */
+.header-left {
+    text-align: left;
+}
+
 .header-left b {
     color: #587ba1ff;
     font-weight: 600;
@@ -23,10 +27,13 @@ header .header-container {
 /* Zona centro*/
 .header-center {
     display: flex;
-    align-items: center; 
-    gap: 5px; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    gap: 5px;
 }
 
+/* Enlaces del centro */
 .header-center a {
     text-decoration: none;
     color: #587ba1ff;
@@ -35,18 +42,19 @@ header .header-container {
     align-items: center;
 }
 
+/* Icono centro */
 .header-center img {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    display: block;
 }
 
 /* Zona derecha */
 .header-right {
     display: flex;
+    justify-content: flex-end; /* alinea a la derecha */
     align-items: center;
-    gap: 10px; /* separación entre carrito y cerrar sesión */
+    gap: 10px;
 }
 
 .header-right a {
@@ -57,12 +65,12 @@ header .header-container {
     align-items: center;
 }
 
-/* Imagen del carrito */
+/* Icono carrito */
 img {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 </style>
 

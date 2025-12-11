@@ -19,6 +19,7 @@
         text-align: center;
         margin-bottom: 20px;
         color: #587ba1ff;
+        text-shadow: 1px 1px 5px rgba(10, 1, 74, 0.5);
     }
 
     .category-list {
