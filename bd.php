@@ -44,5 +44,16 @@
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $resultado;
-    }      
+    }    
+    
+    function getProductInfo($id){
+        $pdo = connectDatabase();
+
+        $stmt = $pdo->prepare("SELECT Nombre FROM Productos where CodProd like :codProd");
+        $stmt->execute([":codProd" => $id]);
+
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
 ?>
