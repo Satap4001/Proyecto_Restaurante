@@ -16,15 +16,19 @@
             } else {
                 $nombre = "";
             }
+            if ($unidades != 0 ){
+                echo "<tr>";
+                echo "<td>" . $nombre . "</td>";
+                echo "<td>" . $unidades . "</td>";
+                echo "<td>
+                        <form action='eliminar.php' method='post'>
+                            <input type='hidden' name='cod' value='" . $cod . "'>
+                            <button type='submit'>Eliminar</button>
+                        </form>
+                    </td>";
+                echo "</tr>";
+            }
             
-            echo "<tr>";
-            echo "<td>" . $nombre . "</td>";
-            echo "<td>" . $unidades . "</td>";
-            echo "<td><form action='eliminar.php' method='post'>
-                    <input type='hidden' name='cod' value='" . $cod . "'>
-                    <button type='submit'>Eliminar</button>
-                </form></td>";
-            echo "</tr>";
         }
         echo "</table>";
     } else {
