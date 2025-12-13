@@ -26,6 +26,9 @@
         addProductoPedido($codPedido, $producto, $Unidades);
     }
 
-    echo "<br>" .  $pesoTotal;
+    unset($_SESSION['carrito']);
+    $_SESSION['carrito'] = [];
+
+    
 
 ?>
