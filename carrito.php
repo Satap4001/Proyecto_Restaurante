@@ -1,9 +1,14 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
     <style>
         body {
             background-image: url(Images/fondo.webp);
             background-size: cover;
             background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
         }
 
         table {
@@ -68,9 +73,9 @@
             text-shadow: 1px 1px 5px rgba(10, 1, 74, 0.3);
         }
 
-        
-    </style>
-
+        form {
+            text-align: center;
+        }
     </style>
 </head>
 <?php
@@ -78,6 +83,7 @@
     include_once("cabecera.php");
     include_once("bd.php");
 
+    
     if (isset($_SESSION['carrito']) && !empty($_SESSION['carrito'])) {
         echo "<table>";
         echo "<tr class='princ'><th>Producto</th><th>Unidades</th><th>Acción</th></tr>";
