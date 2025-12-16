@@ -85,6 +85,7 @@
             <h1>Lista de categorías</h1>
             <ul class='category-list'>";
 
+            
     //RECOJE Y RECORRE TODAS LAS CATEGORIAS DE LA BASE DE DATOS PARA MOSTRARLAS
     $categorias = getCategory();
     foreach ($categorias as $categoria) {
