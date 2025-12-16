@@ -80,13 +80,15 @@
         
         
     }
+
+    //REGOJE EL NOMBRE DEL REALIZADOR DEL PEDIDO
     $rest = getUser($codRest[0]['CodRes']);
     echo "</p><p>Peso total del pedido: ".$pesoTotal. "</p>
           <p>Restaurante destinatario: ".$rest[0]['Correo']."</div></div>";
     $codPedido = addPedido($fecha,true,$pesoTotal,$codRest[0]['CodRes']);
 
 
-
+    
     foreach ($_SESSION['carrito'] as $producto => $Unidades) {
         addProductoPedido($codPedido, $producto, $Unidades);
     }

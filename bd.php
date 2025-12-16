@@ -1,5 +1,6 @@
 <?php 
 
+    //SE CONECTA A LA BASE DE DATOS
     function connectDatabase ( ){
 
         $host = 'localhost';
@@ -13,6 +14,7 @@
         return $pdo;
     }
 
+    //SELECT A CATEGORIAS SABIENDO SU CODIGO
     function searchCategoryByID ($codCat){
         $pdo = connectDatabase();
 
@@ -24,6 +26,7 @@
         return $resultado;
     }
     
+    //OBTIENE LOS PRODUCTOS DE X CATEGORIA
     function getProductFromCategory($codCat) {
         $pdo = connectDatabase();
 
@@ -35,6 +38,7 @@
         return $resultado;
     }
 
+    //SELECT COMPLETO A LAS CATEGORIAS
     function getCategory (){
         $pdo = connectDatabase();
 
@@ -46,6 +50,7 @@
         return $resultado;
     }    
     
+    //OBTIENE EL NOMBRE DE UN PRODUCTO
     function getProductInfo($id){
         $pdo = connectDatabase();
 
@@ -57,6 +62,7 @@
         return $resultado;
     }
 
+    //OBTIENE EL PESO DE UN PRODUCTO
     function getWeight($id){
         $pdo = connectDatabase();
 
@@ -79,6 +85,7 @@
         return $codPedido;
     }
 
+    //OBTIENE EL CODIGO DE UN RESTAURANTE MEDIANTE SU CORREO
     function getUserID ($user){
         $pdo = connectDatabase();
 
@@ -90,6 +97,7 @@
         return $resultado;
     }
 
+    //OBTIENE EL CORREO DE UN RESTAURANTE MEDIANTE SU CÓDIGO
     function getUser ($id){
         $pdo = connectDatabase();
 

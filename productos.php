@@ -91,6 +91,7 @@
     require_once('bd.php');
     require 'cabecera.php';
 
+    //ACCEDE A LA CATEGORIA SELECCIONADA Y ACCEDE A SUS PRODUCTOS
     echo "<div class='container'><h1>Lista de Productos</h1>";
     $categoria = $_POST["CodCat"];
     $nombreCat = searchCategoryByID($categoria);
@@ -98,6 +99,7 @@
 
     $productos = getProductFromCategory($categoria);
 
+    //MUESTRA LOS PRODUCTOS
     echo "<table border = 1px>";
     echo "<tr class = 'princ'><td>Nombre</td><td>Descripción</td><td>Peso</td><td>Stock</td><td>Comprar</td></tr>";
     foreach($productos as $producto) {
