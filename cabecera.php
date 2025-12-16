@@ -6,6 +6,7 @@ header {
     box-sizing: border-box;
     background-color: #f0f0f0;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
 }
 
 header .header-container {

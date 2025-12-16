@@ -90,6 +90,17 @@
         return $resultado;
     }
 
+    function getUser ($id){
+        $pdo = connectDatabase();
+
+        $stmt = $pdo->prepare("SELECT Correo FROM Restaurantes where codRes like :id");
+        $stmt->execute([":id" => $id]);
+
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
+
     function addProductoPedido($codPedido, $codProdcuto,$unidades){
 
         $pdo = connectDatabase();
